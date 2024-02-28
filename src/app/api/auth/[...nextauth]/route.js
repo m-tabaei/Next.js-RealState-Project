@@ -4,7 +4,7 @@ import CredentialProvider from "next-auth/providers/credentials";
 import User from "@/models/User";
 import { verifyPassword } from "@/utils/auth";
 
-const authOption = {
+export const authOptions = {
   session: { strategy: "jwt" },
   providers: [
     CredentialProvider({
@@ -29,5 +29,5 @@ const authOption = {
   ],
 };
 
-const handler = NextAuth(authOption);
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };

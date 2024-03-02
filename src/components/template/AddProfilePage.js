@@ -1,10 +1,13 @@
 "use client";
+
 import { useState } from "react";
-import styles from "@/template/AddProfilePage.module.css";
-import TextInput from "@/module/Textinput";
+import { Toaster, toast } from "react-hot-toast";
+import TextInput from "@/module/TextInput";
 import RadioList from "@/module/RadioList";
 import TextList from "@/module/TextList";
-
+import CustomDatePicker from "@/module/CustomDatePicker";
+import Loader from "@/module/Loader";
+import styles from "@/template/AddProfilePage.module.css";
 
 function AddProfilePage() {
   const [profileData, setProfileData] = useState({
@@ -19,9 +22,25 @@ function AddProfilePage() {
     rules: [],
     amenities: [],
   });
-const submitHandler=()=>{
-console.log(profileData);
-}
+
+  const [loading, setLoading] = useState(false);
+
+  const submitHandler = async () => {
+    setLoading(true);
+    const res = await fetch("/api/profile", {
+      method: "POST",
+      body: JSON.stringify(profileData),
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+    setLoading(false);
+    if (data.error) {
+      toast.error(data.error);
+    } else {
+      toast.success(data.message);
+      router.refresh();
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -31,11 +50,15 @@ console.log(profileData);
         name="title"
         profileData={profileData}
         setProfileData={setProfileData}
-        
       />
-      <TextInput title="توضیحات" name="description"   profileData={profileData}
-        setProfileData={setProfileData} textarea={true}  />
-        <TextInput
+      <TextInput
+        title="توضیحات"
+        name="description"
+        profileData={profileData}
+        setProfileData={setProfileData}
+        textarea={true}
+      />
+      <TextInput
         title="آدرس"
         name="location"
         profileData={profileData}
@@ -72,12 +95,19 @@ console.log(profileData);
         setProfileData={setProfileData}
         type="rules"
       />
-        {/* <button className={styles.submit} onClick={editHandler}>
-          ویرایش آگهی
-        </button> */}
-         <button className={styles.submit} onClick={submitHandler}>
+      
+      <CustomDatePicker
+        profileData={profileData}
+        setProfileData={setProfileData}
+      />
+      <Toaster />
+      {loading ? (
+        <Loader />
+      ) : (
+        <button className={styles.submit} onClick={submitHandler}>
           ثبت آگهی
         </button>
+      )}
     </div>
   );
 }

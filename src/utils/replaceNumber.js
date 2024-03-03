@@ -7,7 +7,8 @@ const sp = (number) => {
   const seperatedNumber = number
     .toString()
     .match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
-  const joinedNumber = seperatedNumber.join(",");
+    const joinedNumber = seperatedNumber ? seperatedNumber.join(",") : "";
+
   return e2p(joinedNumber);
 };
 

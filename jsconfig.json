@@ -10,7 +10,8 @@
       "@/layout/*": ["src/components/layout/*"],
       "@/template/*": ["src/components/template/*"],
       "@/providers/*": ["src/providers/*"],
-      "@/api/*": ["src/app/api/*"]
+      "@/api/*": ["src/app/api/*"],
+      "@/constants/*": ["src/constants/*"]
     }
   }
 }

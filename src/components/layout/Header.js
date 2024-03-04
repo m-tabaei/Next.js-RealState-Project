@@ -25,6 +25,7 @@ function Header() {
         <div className="styles.login">
           <Link href="/dashboard">
             <FaUserAlt />
+          <span>  پنل مدیریت  </span>
           </Link>
         </div>
       ) : (

@@ -46,8 +46,8 @@ export async function DELETE(req, context) {
       { message: "آگهی موردنظر حذف شد" },
       { status: 200 }
     );
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.log(error);
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }

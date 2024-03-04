@@ -62,6 +62,7 @@ function AddProfilePage({ data }) {
       toast.error(data.error);
     } else {
       toast.success(data.message);
+      router.push ("/dashboard/my-profiles")
       router.refresh();
     }
   };

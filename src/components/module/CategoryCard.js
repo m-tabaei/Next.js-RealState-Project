@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/module/CategoryCard.module.css";
-function CategoryCard({ title, name }) {
+
+function CategoryCard({ name, title }) {
   return (
     <div className={styles.card}>
-      <Link href="/">
+      <Link href={`/buy-residential?category=${name}`}>
         <Image
-          src={`/image/${name}.png`}
+          src={`/images/${name}.png`}
           alt={title}
           width={240}
           height={144}

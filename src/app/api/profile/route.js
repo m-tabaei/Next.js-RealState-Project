@@ -5,10 +5,18 @@ import connectDB from "@/utils/connectDB";
 import User from "@/models/User";
 import Profile from "@/models/Profile";
 
-export async function GET(){
+export async function GET() {
   try {
-    connectDB()
-    
+    await connectDB();
+    const profiles = await Profile.find().select("-userId");
+    return NextResponse.json(
+      {
+        data: profiles,
+      },
+      {
+        status: 200,
+      }
+    );
   } catch (error) {
     console.log(err);
     return NextResponse.json(
@@ -99,7 +107,7 @@ export async function POST(req) {
 export async function PATCH(req) {
   try {
     connectDB();
- 
+
     const {
       _id,
       title,
@@ -112,7 +120,7 @@ export async function PATCH(req) {
       category,
       amenities,
       rules,
-    } = await req.json()
+    } = await req.json();
 
     const session = await getServerSession(req);
     if (!session) {
@@ -187,5 +195,3 @@ export async function PATCH(req) {
     );
   }
 }
-
-

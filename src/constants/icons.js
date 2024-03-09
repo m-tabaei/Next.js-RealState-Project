@@ -10,4 +10,4 @@ const icons = {
   office: <GiOfficeChair />,
 };
 
-export default { icons };
+export  { icons };

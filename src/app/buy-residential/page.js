@@ -10,7 +10,7 @@ function BuyResidential({ searchParams }) {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://localhost:3000/api/profile", {
+      fetch("https://next-js-real-state-project-fullstack.vercel.app/api/profile", {
         headers: {
           "Cache-Control": "no-store",
         },

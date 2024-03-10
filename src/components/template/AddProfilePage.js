@@ -28,7 +28,7 @@ function AddProfilePage({ data }) {
 
   useEffect(() => {
     if (data) setProfileData(data);
-  }, []);
+  }, [data, setProfileData]);
 
   const router = useRouter();
 

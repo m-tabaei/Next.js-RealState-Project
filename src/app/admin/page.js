@@ -1,27 +1,31 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/api/auth/[...nextauth]/route";
+import AdminPage from "@/template/AdminPage";
 import connectDB from "@/utils/connectDB";
 import User from "@/models/User";
+import Profile from "@/models/Profile";
 import DashboardSidebar from "@/layout/DashboardSidebar";
 
-
 export const metadata = {
-  title: "Admin Panel",
+  title: "User ad analysis",
 };
 
-async function DashboardLayout({ children }) {
+async function Admin() {
+  await connectDB();
   const session = await getServerSession(authOptions);
   if (!session) redirect("/signin");
-  await connectDB();
-  const user = await User.findOne({ email: session.user.email });
 
-  if (!user) return <h3>مشکلی پیش امده است </h3>;
+  const user = await User.findOne({ email: session.user.email });
+  if (user.role !== "ADMIN") redirect("/dashboard");
+
+  const profiles = await Profile.find({ published: false });
+
   return (
     <DashboardSidebar role={user.role} email={user.email}>
-      {children}
+      <AdminPage profiles={profiles} />
     </DashboardSidebar>
   );
 }
 
-export default DashboardLayout;
+export default Admin;

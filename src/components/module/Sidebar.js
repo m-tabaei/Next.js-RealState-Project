@@ -8,6 +8,7 @@ function Sidebar() {
     { office: "دفتر" },
     { store: "مغازه" },
   ];
+  
   return (
     <div className={styles.container}>
       <p>
@@ -15,8 +16,9 @@ function Sidebar() {
         دسته بندی
       </p>
      <h1> <Link href="/buy-residential">همه</Link></h1>
-      {queries.map((query) => (
+      {queries.map((query, index) => (
         <Link
+        key={index}
           href={{
             pathname: "/buy-residential",
             query: { category: Object.keys(query) },

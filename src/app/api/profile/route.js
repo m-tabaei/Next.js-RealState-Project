@@ -8,7 +8,7 @@ import Profile from "@/models/Profile";
 export async function GET() {
   try {
     await connectDB();
-    const profiles = await Profile.find().select("-userId");
+    const profiles = await Profile.find({published:true}).select("-userId");
     return NextResponse.json(
       {
         data: profiles,
@@ -18,7 +18,7 @@ export async function GET() {
       }
     );
   } catch (error) {
-    console.log(err);
+   
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }
@@ -90,13 +90,13 @@ export async function POST(req) {
       price: +price,
       userId: new Types.ObjectId(user._id),
     });
-    console.log(newProfile);
+   
     return NextResponse.json(
       { message: "آگهی جدید اضافه شد" },
       { status: 201 }
     );
   } catch (err) {
-    console.log(err);
+    
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }
@@ -177,18 +177,19 @@ export async function PATCH(req) {
     profile.amenities = amenities;
     profile.rules = rules;
     profile.category = category;
+    profile.published = false;
     profile.save();
 
     return NextResponse.json(
       {
-        message: "آگهی با موفقیت ویرایش شد",
+        message: "آگهی با موفقیت ویرایش شد، منتظر تایید بمانید!",
       },
       {
         status: 200,
       }
     );
   } catch (error) {
-    console.log(err);
+ 
     return NextResponse.json(
       { error: "مشکلی در سرور رخ داده است" },
       { status: 500 }

@@ -51,3 +51,7 @@
 .container a svg {
   font-size: 1.5rem;
 }
+.waiting{
+  color: red;
+  font-weight: bold;
+}

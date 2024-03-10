@@ -1,19 +1,61 @@
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import BuyResidentialsPage from "@/template/BuyResidentialsPage";
 
-async function BuyResidential({ searchParams }) {
-  const res = await fetch("http://localhost:3000/api/profile", {
-    cash: "no-store",
-  });
-  const data = await res.json();
-  if (data.error) return <h3>مشکلی در سرور به وجود آمده است</h3>;
+function BuyResidential({ searchParams }) {
+  const router = useRouter();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  let finalData = data.data;
-  if (searchParams.category) {
-    finalData = finalData.filter((i) => i.category === searchParams.category);
-  }
+  useEffect(() => {
+    const fetchData = () => {
+      fetch("http://localhost:3000/api/profile", {
+        headers: {
+          "Cache-Control": "no-store",
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.error) {
+            console.error("Server error:", result.error);
+            return;
+          }
+
+          let finalData = result.data;
+
+          if (searchParams.category) {
+            finalData = finalData.filter((item) => item.category === searchParams.category);
+          }
+
+          setData(finalData);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    };
+
+    fetchData();
+  }, [searchParams.category]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      router.refresh();
+    }
+  }, []);
+
   return (
     <div>
-      <BuyResidentialsPage data={finalData} />
+      {loading ? (
+        <h3>در حال دریافت اطلاعات...</h3>
+      ) : data.length === 0 ? (
+        <h3>هیچ داده‌ای یافت نشد</h3>
+      ) : (
+        <BuyResidentialsPage data={data} />
+      )}
     </div>
   );
 }

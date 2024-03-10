@@ -4,7 +4,7 @@ import styles from "@/module/CategoryCard.module.css";
 
 function CategoryCard({ name, title }) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} key={name}>
       <Link href={`/buy-residential?category=${name}`}>
         <Image
           src={`/images/${name}.png`}

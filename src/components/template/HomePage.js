@@ -10,14 +10,7 @@ function HomePage() {
       <div className={styles.banner}>
         <div className={styles.desc}>
           <h1>سامانه خرید و اجاره ملک</h1>
-          <ul>
-            {services.map((i) => (
-              <li key={i}>
-                <FiCircle />
-                <span>{i}</span>
-              </li>
-            ))}
-          </ul>
+         
         </div>
       </div>
       <div className={styles.categories}>

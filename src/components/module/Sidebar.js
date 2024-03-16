@@ -3,19 +3,18 @@ import { HiFilter } from "react-icons/hi";
 import styles from "@/module/Sidebar.module.css";
 function Sidebar() {
   const queries = [
-    { villa: "ویلا" },
-    { apartment: "آپارتمان" },
-    { office: "دفتر" },
-    { store: "مغازه" },
+    { villa: "House" },
+    { apartment: "Apartment" },
+    { office: "Office" },
+    { store: "Store" },
   ];
   
   return (
     <div className={styles.container}>
       <p>
         <HiFilter />
-        دسته بندی
-      </p>
-     <h1> <Link href="/buy-residential">همه</Link></h1>
+Categories      </p>
+     <h1> <Link href="/buy-residential">All </Link></h1>
       {queries.map((query, index) => (
         <Link
         key={index}

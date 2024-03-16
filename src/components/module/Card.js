@@ -16,9 +16,9 @@ function Card({ data: { _id, category, title, location, price,  published} }) {
         <HiOutlineLocationMarker />
         {location}
       </p>
-      <span>{sp(price)} تومان</span>
+      <span>{sp(price)} $ </span>
       <Link href={`/buy-residential/${_id}`}>
-        مشاهده آگهی
+        View Commercial
         <BiLeftArrowAlt />
       </Link>
     </div>

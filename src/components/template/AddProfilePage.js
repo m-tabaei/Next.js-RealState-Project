@@ -62,61 +62,60 @@ function AddProfilePage({ data }) {
       toast.error(data.error);
     } else {
       toast.success(data.message);
-      router.push ("/dashboard/my-profiles")
+      router.push("/dashboard/my-profiles");
       router.refresh();
     }
   };
 
   return (
     <div className={styles.container}>
-      <h3>{data ? "ویرایش آگهی" : "ثبت آگهی"}</h3>
+      <h3>{data ? "Edit Comercial" : "Create Comercial"}</h3>
       <TextInput
-        title="عنوان آگهی"
+        title="Title"
         name="title"
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
-        title="توضیحات"
+        title="Description"
         name="description"
         profileData={profileData}
         setProfileData={setProfileData}
         textarea={true}
       />
       <TextInput
-        title="آدرس"
+        title="Location"
         name="location"
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
-        title="شماره تماس"
+        title=" Phone"
         name="phone"
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <TextInput
-        title="قیمت(تومان)"
+        title="Price($)"
         name="price"
         profileData={profileData}
         setProfileData={setProfileData}
-       
       />
       <TextInput
-        title="بنگاه"
+        title="RealState"
         name="realState"
         profileData={profileData}
         setProfileData={setProfileData}
       />
       <RadioList profileData={profileData} setProfileData={setProfileData} />
       <TextList
-        title="امکانات رفاهی"
+        title="Amenities "
         profileData={profileData}
         setProfileData={setProfileData}
         type="amenities"
       />
       <TextList
-        title="قوانین"
+        title="rules"
         profileData={profileData}
         setProfileData={setProfileData}
         type="rules"
@@ -131,11 +130,11 @@ function AddProfilePage({ data }) {
         <Loader />
       ) : data ? (
         <button className={styles.submit} onClick={editHandler}>
-          ویرایش آگهی
+          Edit
         </button>
       ) : (
         <button className={styles.submit} onClick={submitHandler}>
-          ثبت آگهی
+          Send
         </button>
       )}
     </div>

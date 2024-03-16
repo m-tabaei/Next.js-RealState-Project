@@ -50,7 +50,7 @@ function BuyResidential({ searchParams }) {
   return (
     <div>
       {loading ? (
-        <h3>در حال دریافت اطلاعات...</h3>
+        <h3>Loading ...</h3>
       ) : data.length === 0 ? (
         <h3>هیچ داده‌ای یافت نشد</h3>
       ) : (

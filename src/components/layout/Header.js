@@ -14,10 +14,10 @@ function Header() {
       <div>
         <ul>
           <li>
-            <Link href="/">صفحه اصلی</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/buy-residential">آگهی ها</Link>
+            <Link href="/buy-residential">commercials </Link>
           </li>
         </ul>
       </div>
@@ -25,7 +25,8 @@ function Header() {
         <div className="styles.login">
           <Link href="/dashboard">
             <FaUserAlt />
-          <span>  پنل مدیریت  </span>
+          <span>  
+           User Panel   </span>
           </Link>
         </div>
       ) : (

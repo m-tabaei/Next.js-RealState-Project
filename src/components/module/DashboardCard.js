@@ -39,7 +39,7 @@ function DashboardCard({ data }) {
         <Loader />
       ) :   (
         <button onClick={editHandler}>
-        ویرایش
+        Edit
         <FiEdit />
       </button>
       )}
@@ -48,7 +48,7 @@ function DashboardCard({ data }) {
         <Loader />
       ) :   (
         <button onClick={deleteHandler}>
-        حذف آگهی
+Delete
         <AiOutlineDelete />
       </button>
       )}

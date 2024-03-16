@@ -10,10 +10,10 @@ const cities = [
   "خرم آباد",
 ];
 const categories = {
-  apartment: "آپارتمان",
-  villa: "ویلا",
-  store: "مغازه",
-  office: "دفتر",
+  apartment: "Apartment",
+  villa: "House",
+  store: "Store",
+  office: "Office",
 };
 
 export { services, cities, categories };

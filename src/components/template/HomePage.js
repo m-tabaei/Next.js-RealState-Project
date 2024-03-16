@@ -9,7 +9,7 @@ function HomePage() {
     <div>
       <div className={styles.banner}>
         <div className={styles.desc}>
-          <h1>سامانه خرید و اجاره ملک</h1>
+          <h1>Purchase and Rental </h1>
          
         </div>
       </div>
@@ -19,7 +19,7 @@ function HomePage() {
         ))}
       </div>
       <div className={styles.city}>
-        <h3>شهر های پر بازدید</h3>
+        <h3>Locations</h3>
         <ul>
           {cities.map((i) => (
             <li key={i}>

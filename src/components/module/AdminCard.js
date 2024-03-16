@@ -30,17 +30,17 @@ function AdminCard({ data: { _id, title, description, location, price } }) {
 
   return (
     <div className={styles.container}>
-      <span>موضوع آگهی :</span>
+      <span>Title</span>
       <h3> {title} </h3>
       <p>{description}</p>
       <div className={styles.properties}>
         <span>{location}</span>
         <span>{sp(price)}</span>
       </div>
-      <button onClick={publishHandler}>انتشار</button>
+      <button onClick={publishHandler}>Publish</button>
       <div className={styles.delete}>
 
-      <button onClick={deleteHandler}>حذف آگهی </button>
+      <button onClick={deleteHandler}>Delete </button>
       </div>
       <Toaster />
     </div>

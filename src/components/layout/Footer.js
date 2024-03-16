@@ -4,19 +4,17 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.desc}>
-        <h3>سامانه خرید و اجاره ملک</h3>
+        <h3>Purchase and Rental </h3>
         <p>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-          ستون و سطرآنچنان که لازم است.
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit distinctio exercitationem, nemo accusantium minus repellendus vitae quis error quae labore perferendis odio accusamus, natus harum vero sint. Quisquam, aliquam quo.
         </p>
       </div>
       <div>
         <ul>
-          <li>تعرفه قانونی</li>
-          <li>دسترسی سریع</li>
-          <li>مشاورین خبره</li>
-          <li>قولنامه محضری</li>
+          <li>Managers</li>
+          <li>Gallery</li>
+          <li>Contact Us</li>
+  
         </ul>
       </div>
     </footer>

@@ -10,7 +10,7 @@ function BuyResidentialsPage({ data }) {
       </div>
       <div className={styles.main}>
         {data.length ? null : (
-          <p className={styles.text}>هیچ آگهی ثبت نشده است</p>
+          <p className={styles.text}>There isn'n any Data</p>
         )}
         {data.map((profile) => (
           <Card key={profile._id} data={profile} />

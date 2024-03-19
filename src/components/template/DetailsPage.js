@@ -32,17 +32,17 @@ function DetailsPage({
           <HiOutlineLocationMarker />
           {location}
         </span>
-        <Title>توضیحات</Title>
+        <Title>description</Title>
         <p>{description}</p>
-        <Title>امکانات رفاهی</Title>
+        <Title>amenities </Title>
         <ItemList data={amenities} />
-        <Title>قوانین</Title>
+        <Title>rules</Title>
         <ItemList data={rules} />
       </div>
       <div className={styles.sidebar}>
         <div className={styles.realState}>
           <SiHomebridge />
-          <p>املاک {realState}</p>
+          <p>realState {realState}</p>
           <span>
             <AiOutlinePhone />
             {e2p(phone)}
@@ -54,7 +54,7 @@ function DetailsPage({
             {icons[category]}
             {categories[category]}
           </p>
-          <p>{sp(price)} تومان</p>
+          <p>{sp(price)} $</p>
           <p>
             <BiCalendarCheck />
             {new Date(constructionDate).toLocaleDateString("fa-IR")}

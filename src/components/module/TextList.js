@@ -30,13 +30,13 @@ function TextList({ title, profileData, setProfileData, type }) {
             onChange={(e) => changeHandler(e, index)}
           />
           <button onClick={() => deleteHandler(index)}>
-            حذف
+            Delete
             <AiOutlineDelete />
           </button>
         </div>
       ))}
       <button onClick={addHandler}>
-        افزودن
+        Add
         <MdOutlineLibraryAdd />
       </button>
     </div>

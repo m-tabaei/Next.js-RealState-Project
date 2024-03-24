@@ -10,10 +10,10 @@ function RadioList({ profileData, setProfileData }) {
 
   return (
     <div className={styles.container}>
-      <p>دسته بندی</p>
+      <p>Categories</p>
       <div className={styles.main}>
         <div>
-          <label htmlFor="villa">ویلا</label>
+          <label htmlFor="villa">villa</label>
           <input
             type="radio"
             name="category"
@@ -24,7 +24,7 @@ function RadioList({ profileData, setProfileData }) {
           />
         </div>
         <div>
-          <label htmlFor="apartment">آپارتمان</label>
+          <label htmlFor="apartment">apartment</label>
           <input
             type="radio"
             name="category"
@@ -35,7 +35,7 @@ function RadioList({ profileData, setProfileData }) {
           />
         </div>
         <div>
-          <label htmlFor="store">مغازه</label>
+          <label htmlFor="store">store</label>
           <input
             type="radio"
             name="category"
@@ -46,7 +46,7 @@ function RadioList({ profileData, setProfileData }) {
           />
         </div>
         <div>
-          <label htmlFor="office">دفتر</label>
+          <label htmlFor="office">office</label>
           <input
             type="radio"
             name="category"

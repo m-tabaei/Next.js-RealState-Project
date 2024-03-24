@@ -39,21 +39,21 @@ function SignupPage() {
 
   return (
     <div className={styles.form}>
-      <h4>فرم ثبت نام</h4>
+      <h4>Register your account</h4>
       <form>
-        <label>ایمیل:</label>
+        <label>Email :</label>
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label>رمز عبور:</label>
+        <label>Password :</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label>تکرار رمز عبور:</label>
+        <label>Enter your password again :</label>
         <input
           type="password"
           value={rePassword}
@@ -63,13 +63,13 @@ function SignupPage() {
           <Loader />
         ) : (
           <button type="submit" onClick={signupHandler}>
-            ثبت نام
+             Sign up
           </button>
         )}
       </form>
       <p>
-        حساب کاربری دارید؟
-        <Link href="/signin">ورود</Link>
+      Do you have an account?
+        <Link href="/signin">Login</Link>
       </p>
       <Toaster />
     </div>

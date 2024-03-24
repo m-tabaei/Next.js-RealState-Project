@@ -33,15 +33,15 @@ function SigninPage() {
 
   return (
     <div className={styles.form}>
-      <h4>فرم ورود</h4>
+      <h4>Registration Form</h4>
       <form>
-        <label>ایمیل:</label>
+        <label>Email :</label>
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label>رمز عبور:</label>
+        <label>Password :</label>
         <input
           type="password"
           value={password}
@@ -51,13 +51,12 @@ function SigninPage() {
           <Loader />
         ) : (
           <button type="submit" onClick={signinHandler}>
-           ورود
+           Login
           </button>
         )}
       </form>
       <p>
-        حساب کاربری ندارید؟
-        <Link href="/signup">ثبت نام</Link>
+You have not an account?        <Link href="/signup">Sign up</Link>
       </p>
       <Toaster />
     </div>

@@ -1,33 +1,27 @@
 export const images = [
     {
       id: 1,
-      src: "/images/Blackcoffee.png",
-      title: "Black Coffee",
-      desc: "Black coffee is a beverage made from roasted coffee beans. The beans are ground and soaked in water, which releases their flavor, color, caffeine content, and nutrients. ",
+      src: "/images/villa.png",
+      title: "villa",
+      desc: "Luxurious and spacious, villas offer the epitome of upscale living. With sprawling gardens, private pools, and panoramic views, these homes redefine elegance and comfort. ",
     },
     {
       id: 2,
-      src: "/images/Cappuccino2.jpg",
-      title: "Cappuccino",
-      desc: "A cappuccino is an espresso-based coffee drink that is traditionally prepared with steamed milk foam (microfoam). Cappuccino. Type, Hot.",
+      src: "/images/apartment.png",
+      title: "Apartment",
+      desc: "Urban living at its finest, apartments provide convenience and community. Offering modern amenities and strategic locations, they cater to those seeking a vibrant lifestyle in the heart of the city.",
     },
     {
       id: 3,
-      src: "/images/Espresso.png",
-      title: "Espresso",
-      desc: "Espresso is a concentrated form of coffee, served in shots. It's made of two ingredients - finely ground, 100% coffee, and hot water.",
+      src: "/images/store.png",
+      title: "Shop & Store",
+      desc: "Prime commercial spaces for entrepreneurs and retailers alike, shops serve as the cornerstone of bustling neighborhoods. With high foot traffic and visibility, they offer lucrative opportunities for business growth and success.",
     },
     {
       id: 4,
-      src: "/images/Latte.jpg",
-      title: "Latte",
-      desc: "A latte or caffè latte is a milk coffee that boasts a silky layer of foam as a real highlight to the drink. A true latte will be made up of one or two shots of espresso, steamed milk and a final, thin layer of frothed milk on top",
-    },
-    {
-      id: 5,
-      src: "/images/Macchiato.jpg",
-      title: "Macchiato",
-      desc: "Caffè macchiato, sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed. ",
+      src: "/images/office.png",
+      title: "Office",
+      desc: "Designed for productivity and professionalism, offices provide tailored environments for businesses to thrive. Featuring ergonomic workspaces, cutting-edge technology, and strategic layouts, they foster innovation and collaboration among teams.",
     },
   ];
   

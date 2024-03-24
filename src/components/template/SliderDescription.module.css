@@ -1,26 +1,19 @@
 .sliderdescriptioncontainer {
     display: grid;
     place-items: start;
-    width: 80%;
+    width: 100%;
     background-color: #e7dfd9;
     position: relative;
     border-top-right-radius: 3rem;
     border-bottom-right-radius: 3rem;
+    margin-right: 1rem;
   }
   
-  .coffeecafelabel {
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
-    text-decoration: underline;
-  }
+
   
   .slidercontent {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     padding: 3rem 1rem;
     text-align: left;
   }
@@ -40,7 +33,7 @@
   }
   
   .slidercontrols {
-    position: absolute;
+    position: relative;
     bottom: 1rem;
     right: 1rem;
   }
@@ -61,8 +54,8 @@
     right: 0.5rem;
   }
   .title {
-    font-size: 3.75rem; 
-    font-weight: 800;
+    font-size: 2rem; 
+    font-weight: 400;
 }
 
 .description {

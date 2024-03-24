@@ -11,7 +11,7 @@ function CustomDatePicker({ profileData, setProfileData }) {
 
   return (
     <div className={styles.container}>
-      <p>تاریخ ساخت</p>
+      <p>Build Date</p>
       <DatePicker
         calendar={persian}
         locale={persian_fa}

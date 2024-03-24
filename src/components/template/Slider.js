@@ -34,12 +34,13 @@ const Slider = () => {
         <div
         key={id}
         style={{ display: id === activeImage ? 'block' : 'none' }}
+       
       >
         <Image
           src={elem.src}
           alt=""
-          width={400}
-          height={400}
+          width={800}
+          height={800}
           className={style.image}
         />
       </div>

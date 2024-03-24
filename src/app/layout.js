@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="en" dir="ltr">
       <body className={yekan.className}>
         <NextAuthProvider>
           <Layout>{children}</Layout>

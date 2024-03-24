@@ -33,7 +33,7 @@ function Header() {
         <div className="styles.login">
           <Link href="/signin">
             <FiLogIn />
-            <span>ورود</span>
+            <span>Login</span>
           </Link>
         </div>
       )}

@@ -12,10 +12,10 @@ async function DashboardSidebar({ children, email, role }) {
        <h3> {role === "ADMIN" ? "Admin" : null}</h3>
         <p>{email}</p>
         <span></span>
-        <Link href="/dashboard">حساب کاربری</Link>
-        <Link href="/dashboard/my-profiles">آگهی های من</Link>
-        <Link href="/dashboard/add">ثبت آگهی</Link>
-        {role === "ADMIN" ? <Link href="/admin">در انتظار تایید</Link>:null}
+        <Link href="/dashboard">Your account</Link>
+        <Link href="/dashboard/my-profiles">My Post</Link>
+        <Link href="/dashboard/add">Create Post</Link>
+        {role === "ADMIN" ? <Link href="/admin">Waiting</Link>:null}
         <LogoutButton/>
       </div>
       <div className={styles.main}>{children}</div>

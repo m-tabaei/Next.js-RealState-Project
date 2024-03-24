@@ -1,18 +1,17 @@
 import React from "react";
-import left from "../../../public/images/left.svg";
-import right from "../../../public/images/right.svg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "@/constants/sliderPics";
-import style from "@/template/SliderDescription.module.css"
+import style from "@/template/SliderDescription.module.css";
+import left from "@/public/images/left.svg";
+import right from "@/public/images/right.svg";
 const SliderDescription = ({ activeImage, clickNext, clickPrev }) => {
   return (
     <div className={style.sliderdescriptioncontainer}>
-      <div className={style.coffeecafelabel}>Coffee Cafe</div>
       {images.map((elem, id) => (
         <div
           key={id}
-          style={{ display: id === activeImage ? 'block' : 'none' }}
+          style={{ display: id === activeImage ? "block" : "none" }}
           className={style.slidercontent}
         >
           <motion.div
@@ -30,8 +29,8 @@ const SliderDescription = ({ activeImage, clickNext, clickPrev }) => {
               x: { duration: 1 },
             }}
           >
-          <div className={style.title}>{elem.title}</div>
-<div className={style.description}>{elem.desc}</div>
+            <div className={style.title}>{elem.title}</div>
+            <div className={style.description}>{elem.desc}</div>
           </motion.div>
 
           <button onClick={clickNext}>order now</button>

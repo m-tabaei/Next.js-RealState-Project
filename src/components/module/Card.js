@@ -11,7 +11,7 @@ function Card({ data: { _id, category, title, location, price,  published} }) {
     <div className={styles.container}>
       <div className={styles.icon}>{icons[category]}</div>
       <p className={styles.title}>{title}</p>
-      {published === false ? <p className={styles.waiting}>در انتظار تایید</p> : null}
+      {published === false ? <p className={styles.waiting}>Waiting</p> : null}
       <p className={styles.location}>
         <HiOutlineLocationMarker />
         {location}

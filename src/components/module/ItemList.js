@@ -10,7 +10,7 @@ function ItemList({ data }) {
           ))}
         </ul>
       ) : (
-        <p>هیچ موردی ذکر نشده است</p>
+        <p>Can not found Data</p>
       )}
     </div>
   );

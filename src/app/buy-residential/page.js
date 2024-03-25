@@ -46,7 +46,6 @@ function BuyResidential({ searchParams }) {
       router.refresh();
     }
   }, []);
-
   return (
     <div>
       {loading ? (

@@ -10,7 +10,7 @@ function BuyResidentialsPage({ data }) {
       </div>
       <div className={styles.main}>
         {data.length ? null : (
-          <p className={styles.text}>There isn'n any Data</p>
+          <p className={styles.text}>can not found data</p>
         )}
         {data.map((profile) => (
           <Card key={profile._id} data={profile} />

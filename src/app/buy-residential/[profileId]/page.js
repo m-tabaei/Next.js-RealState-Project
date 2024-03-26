@@ -9,13 +9,13 @@ async function profileDetails({ params: { profileId } }) {
     const profile = await Profile.findOne({ _id: profileId });
 
     if (!profile) {
-      return <h3>مشکلی به وجود آمده است</h3>;
+      return <h3>connection have problem</h3>;
     }
 
     return <DetailsPage data={profile} />;
   } catch (error) {
     console.error("Error fetching profile details:", error);
-    return <h3>خطایی در دریافت جزئیات پروفایل به وجود آمده است</h3>;
+    return <h3>Error fetching profile details</h3>;
   }
 }
 
@@ -28,7 +28,7 @@ export const generateMetadata = async ({ params: { profileId } }) => {
     
     if (!profile) {
       return {
-        title: "پروفایل پیدا نشد",
+        title: "con not found profile",
         description: "پروفایل مورد نظر یافت نشد.",
       };
     }
@@ -40,8 +40,8 @@ export const generateMetadata = async ({ params: { profileId } }) => {
   } catch (error) {
     console.error("Error generating metadata:", error);
     return {
-      title: "خطا در ایجاد متا داده",
-      description: "خطا در ایجاد متا داده پروفایل",
+      title: "Error generating metadata",
+      description: "Error generating metadata",
     };
   }
 };

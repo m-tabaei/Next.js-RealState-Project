@@ -5,6 +5,7 @@ import { images } from "@/constants/sliderPics";
 import style from "@/template/SliderDescription.module.css";
 import left from "@/public/images/left.svg";
 import right from "@/public/images/right.svg";
+import  Link  from 'next/link';
 const SliderDescription = ({ activeImage, clickNext, clickPrev }) => {
   return (
     <div className={style.sliderdescriptioncontainer}>
@@ -32,8 +33,9 @@ const SliderDescription = ({ activeImage, clickNext, clickPrev }) => {
             <div className={style.title}>{elem.title}</div>
             <div className={style.description}>{elem.desc}</div>
           </motion.div>
-
-          <button onClick={clickNext}>order now</button>
+          <Link href="/signin">
+            <button onClick={clickNext}>order now</button>
+          </Link>
           <div className={style.slidercontrols}>
             <div className={style.leftarrow} onClick={clickPrev}>
               <Image src={left} alt="" />

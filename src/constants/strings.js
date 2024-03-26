@@ -1,13 +1,13 @@
 const services = ["خرید", "فروش", "رهن", "اجاره"];
 const cities = [
-  "تهران",
-  "سنندج",
-  "کرمانشاه",
-  "اهواز",
-  "مشهد",
-  "اصفهان",
-  "شیراز",
-  "خرم آباد",
+  "Québec City",
+  "Toronto",
+  "Edmonton",
+  "Fredericton",
+  "Halifax",
+  "Charlottetown",
+  "Regina",
+  "Winnipeg",
 ];
 const categories = {
   apartment: "Apartment",

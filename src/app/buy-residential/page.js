@@ -51,7 +51,7 @@ function BuyResidential({ searchParams }) {
       {loading ? (
         <h3>Loading ...</h3>
       ) : data.length === 0 ? (
-        <h3>هیچ داده‌ای یافت نشد</h3>
+        <h3>can not found data</h3>
       ) : (
         <BuyResidentialsPage data={data} />
       )}

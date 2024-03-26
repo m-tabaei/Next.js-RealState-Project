@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 import { FiLogIn } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
 
 import styles from "@/layout/Header.module.css";
-import { useSession } from "next-auth/react";
 
 function Header() {
   const { data } = useSession();

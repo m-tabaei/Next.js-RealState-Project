@@ -5,8 +5,8 @@
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #304ffe;
-    color: #fff;
+    background-color: #e7dfd9;
+    color: #2b2b2b;
   }
   
   .header ul {
@@ -21,14 +21,14 @@
   .login a {
     display: flex;
     align-items: center;
-    background-color: #fff;
-    color: #304ffe;
+    background-color: #2b2b2b;
+    color: #e7dfd9;
     padding: 3px 7px;
     border-radius: 5px;
     transition: all ease-in 0.1s;
   }
   .login a:hover {
-    background-color: #304ffe;
+    background-color: #e7b861;
     color: #fff;
   }
   
